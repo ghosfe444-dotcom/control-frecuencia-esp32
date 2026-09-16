@@ -54,12 +54,8 @@ const device = await navigator.bluetooth.requestDevice({
 
     filters: [
         {
-            namePrefix: "ESP32_"
+            services: [SERVICE_UUID]
         }
-    ],
-
-    optionalServices: [
-        SERVICE_UUID.toLowerCase()
     ]
 });
 
