@@ -52,16 +52,16 @@ async function conectarESP32() {
 
         const device = await navigator.bluetooth.requestDevice({
 
-            filters: [
-                {
-                    services: [SERVICE_UUID]
-                }
-            ],
+    filters: [
+        {
+            namePrefix: "ESP32_"
+        }
+    ],
 
-            optionalServices: [
-                SERVICE_UUID
-            ]
-        });
+    optionalServices: [
+        SERVICE_UUID
+    ]
+});
 
 
         // Evitar conectar dos veces el mismo dispositivo
