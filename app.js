@@ -50,7 +50,7 @@ async function conectarESP32() {
         estadoGeneral.textContent =
             "Buscando ESP32...";
 
-        const device = await navigator.bluetooth.requestDevice({
+const device = await navigator.bluetooth.requestDevice({
 
     filters: [
         {
@@ -59,7 +59,7 @@ async function conectarESP32() {
     ],
 
     optionalServices: [
-        SERVICE_UUID
+        SERVICE_UUID.toLowerCase()
     ]
 });
 
