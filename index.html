@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Control de Frecuencia Cardíaca</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Control de Frecuencia Cardíaca</h1>
+        <p>Monitoreo de alumnos mediante ESP32</p>
+    </header>
+
+    <main>
+
+        <section class="control">
+            <button id="btnConectar">
+                + Conectar ESP32
+            </button>
+
+            <span id="estadoGeneral">
+                Listo para conectar
+            </span>
+        </section>
+
+        <section class="panel">
+            <h2>Alumnos conectados</h2>
+
+            <div class="tabla-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Alumno</th>
+                            <th>BPM</th>
+                            <th>Promedio</th>
+                            <th>Zona</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaAlumnos">
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Resúmenes</h2>
+
+            <div id="resumenes">
+                <p class="sin-datos">
+                    Todavía no se recibió ningún resumen.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
